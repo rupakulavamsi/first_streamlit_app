@@ -43,11 +43,12 @@ except URLError as e:
 #streamlit.write('The user entered ', fruit_choice)
 #streamlit.text(fruityvice_response.json())
 # write your own comment - what does this do?
+
 streamlit.header("The fruit load list contains :")
-#snowwflake-realted functions
+#snowflake-realted functions
 def get_fruit_load_list():
     with my_cnx_cursor() as my_cur:
-        my_cur.execute("select * from fruit_load_list")
+        my_cur.execute("select * from PC_RIVERY_DB.PUBLIC.fruit_load_list")
         return my_cur.fetchall()
 
 # adda button to load the fruit
